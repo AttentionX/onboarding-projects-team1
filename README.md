@@ -1,1 +1,1 @@
-# onboarding-project1-team1
+# onboarding-projects-team1
