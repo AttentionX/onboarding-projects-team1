@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 from vaswani_2017 import PAPER
 import re
@@ -45,6 +46,8 @@ log_path = Path(__file__).resolve().parent / "logs" / str(datetime.now())
 log_path.mkdir(exist_ok=True)
 with open(log_path / "summary.txt", 'w') as fh:
     fh.write(summary)
+with open(log_path / "hparams.json", 'w') as fh:
+    fh.write(json.dumps(vars(args)))
 
 
 
