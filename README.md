@@ -1,14 +1,19 @@
 # onboarding-projects-team1
 
-## Project 1️⃣ - summarizing a paper
+## Project 1️⃣ - summarize a paper (~1/10)
 
 TODO ...
 
 
-## Project 2️⃣ - building a chatbot
+## Project 2️⃣ - build a chatbot (~1/12)
 
 TODO ...
 
+
+## Project 3️⃣ - build something you want (~1/24)
+
+
+TODO ...
 
 
 ## Contributors
