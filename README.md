@@ -20,6 +20,6 @@ TODO ...
 ## Contributors
 
 
-[Eu-Bin KIM](https://github.com/eubinecto) |  TODO ... (박준영)  | [Yujong Lee](https://github.com/yujong-lee)|
+[Eu-Bin KIM](https://github.com/eubinecto) | [Jun-Young Park](https://github.com/engineerA314) | [Yujong Lee](https://github.com/yujong-lee)|
 --- | --- | --- |
 <img width="100" alt="image" src="https://avatars.githubusercontent.com/u/56193069?v=4"> | TODO... |  <img width="100" alt="image" src="https://avatars.githubusercontent.com/u/61503739?v=4"> |
