@@ -1,8 +1,9 @@
 # onboarding-projects-team1
 
 ## Project 1️⃣ - summarize a paper (~1/10)
-
-TODO ...
+- 유빈: [code](https://github.com/AttentionX/onboarding-projects-team1/blob/issue_1/main.py)
+- 유종: [code](https://github.com/AttentionX/onboarding-projects-team1/blob/issue_2/attentionX_1.ipynb)
+- 준영: [code](https://github.com/AttentionX/onboarding-projects-team1/blob/issue_3/Project1/main.py)
 
 
 ## Project 2️⃣ - build a chatbot (~1/12)
