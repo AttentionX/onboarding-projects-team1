@@ -1,0 +1,305 @@
+
+Memory:
+1. The Transformer is a new simple network architecture based solely on attention mechanisms.
+2. Experiments on two machine translation tasks show that the Transformer is superior in quality, more parallelizable and requires less time to train.
+3. The Transformer achieved 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results by over 2 BLEU.
+4. On the WMT 2014 English-to-French translation task, the Transformer established a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs.
+5. The Transformer generalizes well to other tasks, such as English constituency parsing with both large and limited training data.
+
+Questions:
+1. What other tasks can the Transformer be applied to?
+2. How does the Transformer compare to existing models in terms of training time?
+3. What is the BLEU score of the Transformer on the WMT 2014 English-to-German translation task?
+4. How does the Transformer compare to existing models in terms of quality?
+5. How much training data is needed for the Transformer to be applied to English constituency parsing?
+Memory:
+1. The Transformer is a new simple network architecture based solely on attention mechanisms.
+2. Experiments on two machine translation tasks show that the Transformer is superior in quality, more parallelizable and requires less time to train.
+3. The Transformer achieved 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results by over 2 BLEU.
+4. On the WMT 2014 English-to-French translation task, the Transformer established a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs.
+5. The Transformer generalizes well to other tasks, such as English constituency parsing with both large and limited training data.
+6. The Transformer can also be applied to tasks such as language modeling and machine translation.
+7. The Transformer requires less time to train compared to existing models.
+8. The Transformer is superior in quality compared to existing models.
+9. The Transformer can be applied to English constituency parsing with both large and limited training data.
+10. The Transformer achieved a BLEU score of 28.4 on the WMT 2014 English-to-German translation task.
+
+Questions:
+1. How much training data is needed for the Transformer to be applied to English constituency parsing?
+2. What is the BLEU score of the Transformer on the WMT 2014 English-to-French translation task?
+3. What are the advantages of the Transformer compared to existing models?
+4. What other tasks can the Transformer be applied to?
+5. How does the Transformer compare to existing models in terms of quality?
+Memory:
+1. The Transformer is a new simple network architecture based solely on attention mechanisms.
+2. Experiments on two machine translation tasks show that the Transformer is superior in quality, more parallelizable and requires less time to train.
+3. The Transformer achieved 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results by over 2 BLEU.
+4. On the WMT 2014 English-to-French translation task, the Transformer established a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs.
+5. The Transformer generalizes well to other tasks, such as English constituency parsing with both large and limited training data.
+6. The Transformer can also be applied to tasks such as language modeling and machine translation.
+7. The Transformer requires less time to train compared to existing models.
+8. The Transformer is superior in quality compared to existing models.
+9. The Transformer can be applied to English constituency parsing with both large and limited training data.
+10. The Transformer achieved a BLEU score of 28.4 on the WMT 2014 English-to-German translation task.
+
+Questions:
+1. How much training data is needed for the Transformer to be applied to English constituency parsing?
+2. What is the BLEU score of the Transformer on the WMT 2014 English-to-French translation task?
+3. What are the advantages of the Transformer compared to existing models?
+4. What other tasks can the Transformer be applied to?
+5. How does the Transformer compare to existing models in terms of quality?
+Memory:
+1. The Transformer is a new simple network architecture based solely on attention mechanisms.
+2. Experiments on two machine translation tasks show that the Transformer is superior in quality, more parallelizable and requires less time to train.
+3. The Transformer achieved 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results by over 2 BLEU.
+4. On the WMT 2014 English-to-French translation task, the Transformer established a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs.
+5. The Transformer generalizes well to other tasks, such as English constituency parsing with both large and limited training data.
+6. The Transformer can also be applied to tasks such as language modeling and machine translation.
+7. The Transformer requires less time to train compared to existing models.
+8. The Transformer is superior in quality compared to existing models.
+9. The Transformer is composed of a stack of 6 identical layers, each layer has two sub-layers: a multi-head self-attention mechanism and a simple, positionwise fully connected feed-forward network.
+10. The Transformer is auto-regressive, consuming the previously generated symbols as additional input when generating the next.
+
+Questions:
+1. How much training data is needed for the Transformer to be applied to English constituency parsing?
+2. What is the BLEU score of the Transformer on the WMT 2014 English-to-French translation task?
+3. What are the advantages of the Transformer compared to existing models?
+4. What other tasks can the Transformer be applied to?
+5. How does the Transformer compare to existing models in terms of quality?
+Memory:
+1. The Transformer is a new simple network architecture based solely on attention mechanisms.
+2. Experiments on two machine translation tasks show that the Transformer is superior in quality, more parallelizable and requires less time to train.
+3. The Transformer achieved 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results by over 2 BLEU.
+4. On the WMT 2014 English-to-French translation task, the Transformer established a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs.
+5. The Transformer generalizes well to other tasks, such as English constituency parsing with both large and limited training data.
+6. The Transformer can also be applied to tasks such as language modeling and machine translation.
+7. The Transformer requires less time to train compared to existing models.
+8. The Transformer is superior in quality compared to existing models.
+9. The Transformer is composed of a stack of 6 identical layers, each layer has two sub-layers: a multi-head self-attention mechanism and a simple, positionwise fully connected feed-forward network.
+10. The Transformer is auto-regressive, consuming the previously generated symbols as additional input when generating the next.
+11. The attention function maps a query and a set of key-value pairs to an output, where the query, keys, values, and output are all vectors.
+12. The output is computed as a weighted sum of the values, where the weight assigned to each value is computed by a compatibility function of the query with the corresponding key.
+
+Questions:
+1. How much training data is needed for the Transformer to be applied to English constituency parsing?
+2. What is the BLEU score of the Transformer on the WMT 2014 English-to-French translation task?
+3. What are the advantages of the Transformer compared to existing models?
+4. What other tasks can the Transformer be applied to?
+5. How does the Transformer compare to existing models in terms of quality?
+Memory:
+1. The Transformer is a new simple network architecture based solely on attention mechanisms.
+2. Experiments on two machine translation tasks show that the Transformer is superior in quality, more parallelizable and requires less time to train.
+3. The Transformer achieved 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results by over 2 BLEU.
+4. On the WMT 2014 English-to-French translation task, the Transformer established a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs.
+5. The Transformer generalizes well to other tasks, such as English constituency parsing with both large and limited training data.
+6. The Transformer can also be applied to tasks such as language modeling and machine translation.
+7. The Transformer requires less time to train compared to existing models.
+8. The Transformer is superior in quality compared to existing models.
+9. The Transformer is composed of a stack of 6 identical layers, each layer has two sub-layers: a multi-head self-attention mechanism and a simple, positionwise fully connected feed-forward network.
+10. The Transformer is auto-regressive, consuming the previously generated symbols as additional input when generating the next.
+
+Questions:
+1. What other tasks can the Transformer be applied to?
+2. How does the Transformer compare to existing models in terms of quality?
+3. How much training data is needed for the Transformer to be applied to English constituency parsing?
+4. What is the BLEU score of the Transformer on the WMT 2014 English-to-French translation task?
+5. What are the advantages of the Transformer compared to existing models?
+Memory:
+1. The Transformer is a new simple network architecture based solely on attention mechanisms.
+2. Experiments on two machine translation tasks show that the Transformer is superior in quality, more parallelizable and requires less time to train.
+3. The Transformer achieved 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results by over 2 BLEU.
+4. On the WMT 2014 English-to-French translation task, the Transformer established a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs.
+5. The Transformer generalizes well to other tasks, such as English constituency parsing with both large and limited training data.
+6. The Transformer can also be applied to tasks such as language modeling and machine translation.
+7. The Transformer requires less time to train compared to existing models.
+8. The Transformer is superior in quality compared to existing models.
+9. The Transformer is composed of a stack of 6 identical layers, each layer has two sub-layers: a multi-head self-attention mechanism and a simple, positionwise fully connected feed-forward network.
+10. The Transformer is auto-regressive, consuming the previously generated symbols as additional input when generating the next.
+
+Questions:
+1. What other tasks can the Transformer be applied to?
+2. How does the Transformer compare to existing models in terms of quality?
+3. How much training data is needed for the Transformer to be applied to English constituency parsing?
+4. What is the BLEU score of the Transformer on the WMT 2014 English-to-French translation task?
+5. What are the advantages of the Transformer compared to existing models?
+Memory:
+1. The Transformer is a new simple network architecture based solely on attention mechanisms.
+2. Experiments on two machine translation tasks show that the Transformer is superior in quality, more parallelizable and requires less time to train.
+3. The Transformer achieved 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results by over 2 BLEU.
+4. On the WMT 2014 English-to-French translation task, the Transformer established a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs.
+5. The Transformer generalizes well to other tasks, such as English constituency parsing with both large and limited training data.
+6. The Transformer can also be applied to tasks such as language modeling and machine translation.
+7. The Transformer requires less time to train compared to existing models.
+8. The Transformer is superior in quality compared to existing models.
+9. The Transformer is composed of a stack of 6 identical layers, each layer has two sub-layers: a multi-head self-attention mechanism and a simple, positionwise fully connected feed-forward network.
+10. The Transformer is auto-regressive, consuming the previously generated symbols as additional input when generating the next.
+11. The dimensionality of input and output is dmodel = 512, and the inner-layer has dimensionality df f = 2048.
+12. We also use the usual learned linear transformation and softmax function to convert the decoder output to predicted next-token probabilities.
+13. In our model, we share the same weight matrix between the two embedding layers and the pre-softmax linear transformation.
+14. We add "positional encodings" to the input embeddings at the bottoms of the encoder and decoder stacks.
+15. The positional encodings have the same dimension dmodel as the embeddings, so that the two can be summed.
+
+Questions:
+1. What other tasks can the Transformer be applied to?
+2. How does the Transformer compare to existing models in terms of quality?
+3. How much training data is needed for the Transformer to be applied to English constituency parsing?
+4. What is the complexity per layer of self-attention, recurrent, convolutional and restricted self-attention?
+5. What are the advantages of the Transformer compared to existing models?
+Memory:
+1. The Transformer is a new simple network architecture based solely on attention mechanisms.
+2. Experiments on two machine translation tasks show that the Transformer is superior in quality, more parallelizable and requires less time to train.
+3. The Transformer achieved 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results by over 2 BLEU.
+4. On the WMT 2014 English-to-French translation task, the Transformer established a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs.
+5. The Transformer generalizes well to other tasks, such as English constituency parsing with both large and limited training data, language modeling and machine translation.
+6. The Transformer requires less time to train compared to existing models.
+7. The Transformer is superior in quality compared to existing models.
+8. The Transformer is composed of a stack of 6 identical layers, each layer has two sub-layers: a multi-head self-attention mechanism and a simple, positionwise fully connected feed-forward network.
+9. The Transformer is auto-regressive, consuming the previously generated symbols as additional input when generating the next.
+10. The dimensionality of input and output is dmodel = 512, and the inner-layer has dimensionality df f = 2048.
+
+Questions:
+1. What other tasks can the Transformer be applied to?
+2. How does the Transformer compare to existing models in terms of quality?
+3. How much training data is needed for the Transformer to be applied to English constituency parsing?
+4. What is the complexity per layer of self-attention, recurrent, convolutional and restricted self-attention?
+5. What are the advantages of the Transformer compared to existing models?
+Memory:
+1. The Transformer is a new simple network architecture based solely on attention mechanisms.
+2. Experiments on two machine translation tasks show that the Transformer is superior in quality, more parallelizable and requires less time to train.
+3. The Transformer achieved 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results by over 2 BLEU.
+4. On the WMT 2014 English-to-French translation task, the Transformer established a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs.
+5. The Transformer generalizes well to other tasks, such as English constituency parsing with both large and limited training data, language modeling and machine translation.
+6. The Transformer requires less time to train compared to existing models.
+7. The Transformer is superior in quality compared to existing models.
+8. The Transformer is composed of a stack of 6 identical layers, each layer has two sub-layers: a multi-head self-attention mechanism and a simple, positionwise fully connected feed-forward network.
+9. The Transformer is auto-regressive, consuming the previously generated symbols as additional input when generating the next.
+10. The dimensionality of input and output is dmodel = 512, and the inner-layer has dimensionality df f = 2048.
+11. Self-attention layers are faster than recurrent layers when the sequence length n is smaller than the representation dimensionality d.
+12. Self-attention could be restricted to considering only a neighborhood of size r in the input sequence centered around the respective output position.
+13. Doing so requires a stack of O(n/k) convolutional layers in the case of contiguous kernels, or O(logk (n)) in the case of dilated convolutions.
+14. Separable convolutions decrease the complexity considerably, to O(k · n · d + n · d2 ).
+15. Self-attention could yield more interpretable models.
+
+Questions:
+1. What other tasks can the Transformer be applied to?
+2. How does the Transformer compare to existing models in terms of quality?
+3. How much training data is needed for the Transformer to be applied to English constituency parsing?
+4. What is the complexity per layer of self-attention, recurrent, convolutional and restricted self-attention?
+5. What are the advantages of the Transformer compared to existing models?
+Memory:
+1. The Transformer is a new simple network architecture based solely on attention mechanisms.
+2. Experiments on two machine translation tasks show that the Transformer is superior in quality, more parallelizable and requires less time to train.
+3. The Transformer achieved 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results by over 2 BLEU.
+4. On the WMT 2014 English-to-French translation task, the Transformer established a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs.
+5. The Transformer generalizes well to other tasks, such as English constituency parsing with both large and limited training data, language modeling and machine translation.
+6. The Transformer requires less time to train compared to existing models.
+7. The Transformer is superior in quality compared to existing models.
+8. The Transformer is composed of a stack of 6 identical layers, each layer has two sub-layers: a multi-head self-attention mechanism and a simple, positionwise fully connected feed-forward network.
+9. The Transformer is auto-regressive, consuming the previously generated symbols as additional input when generating the next.
+10. The dimensionality of input and output is dmodel = 512, and the inner-layer has dimensionality df f = 2048.
+
+Questions:
+1. What other tasks can the Transformer be applied to?
+2. How does the Transformer compare to existing models in terms of quality?
+3. How much training data is needed for the Transformer to be applied to English constituency parsing?
+4. What is the complexity per layer of self-attention, recurrent, convolutional and restricted self-attention?
+5. What are the advantages of the Transformer compared to existing models?
+Memory:
+1. The Transformer is a new simple network architecture based solely on attention mechanisms.
+2. Experiments on two machine translation tasks show that the Transformer is superior in quality, more parallelizable and requires less time to train.
+3. The Transformer achieved 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results by over 2 BLEU.
+4. On the WMT 2014 English-to-French translation task, the Transformer established a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs.
+5. The Transformer generalizes well to other tasks, such as English constituency parsing with both large and limited training data, language modeling and machine translation.
+6. The Transformer requires less time to train compared to existing models.
+7. The Transformer is superior in quality compared to existing models.
+8. The Transformer is composed of a stack of 6 identical layers, each layer has two sub-layers: a multi-head self-attention mechanism and a simple, positionwise fully connected feed-forward network.
+9. The Transformer is auto-regressive, consuming the previously generated symbols as additional input when generating the next.
+10. The dimensionality of input and output is dmodel = 512, and the inner-layer has dimensionality df f = 2048.
+11. Label Smoothing of value ls = 0.1 was used during training.
+
+Questions:
+1. What other tasks can the Transformer be applied to?
+2. How does the Transformer compare to existing models in terms of quality?
+3. How much training data is needed for the Transformer to be applied to English constituency parsing?
+4. What is the complexity per layer of self-attention, recurrent, convolutional and restricted self-attention?
+5. What are the advantages of the Transformer compared to existing models?
+Memory:
+1. The Transformer is a new simple network architecture based solely on attention mechanisms.
+2. Experiments on two machine translation tasks show that the Transformer is superior in quality, more parallelizable and requires less time to train.
+3. The Transformer achieved 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results by over 2 BLEU.
+4. On the WMT 2014 English-to-French translation task, the Transformer established a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs.
+5. The Transformer generalizes well to other tasks, such as English constituency parsing with both large and limited training data, language modeling and machine translation.
+6. The Transformer requires less time to train compared to existing models.
+7. The Transformer is superior in quality compared to existing models.
+8. The Transformer is composed of a stack of 6 identical layers, each layer has two sub-layers: a multi-head self-attention mechanism and a simple, positionwise fully connected feed-forward network.
+9. The Transformer is auto-regressive, consuming the previously generated symbols as additional input when generating the next.
+10. The dimensionality of input and output is dmodel = 512, and the inner-layer has dimensionality df f = 2048.
+11. Label Smoothing of value ls = 0.1 was used during training.
+12. The Transformer uses positional embedding instead of recurrent connections.
+
+Questions:
+1. What other tasks can the Transformer be applied to?
+2. How does the Transformer compare to existing models in terms of quality?
+3. How much training data is needed for the Transformer to be applied to English constituency parsing?
+4. What are the advantages of the Transformer compared to existing models?
+5. What is the complexity per layer of self-attention, recurrent, convolutional and restricted self-attention?
+Memory:
+1. The Transformer is a new simple network architecture based solely on attention mechanisms.
+2. Experiments on two machine translation tasks show that the Transformer is superior in quality, more parallelizable and requires less time to train.
+3. The Transformer achieved 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results by over 2 BLEU.
+4. On the WMT 2014 English-to-French translation task, the Transformer established a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs.
+5. The Transformer generalizes well to other tasks, such as English constituency parsing with both large and limited training data, language modeling and machine translation.
+6. The Transformer requires less time to train compared to existing models.
+7. The Transformer is superior in quality compared to existing models.
+8. The Transformer is composed of a stack of 6 identical layers, each layer has two sub-layers: a multi-head self-attention mechanism and a simple, positionwise fully connected feed-forward network.
+9. The Transformer is auto-regressive, consuming the previously generated symbols as additional input when generating the next.
+10. The dimensionality of input and output is dmodel = 512, and the inner-layer has dimensionality df f = 2048.
+11. Label Smoothing of value ls = 0.1 was used during training.
+12. The Transformer uses positional embedding instead of recurrent connections.
+13. The Transformer can be applied to tasks such as English constituency parsing, language modeling and machine translation.
+14. The Transformer is more parallelizable and requires less time to train compared to existing models.
+15. The complexity per layer of self-attention, recurrent, convolutional and restricted self-attention is not specified.
+
+Questions:
+1. How much training data is needed for the Transformer to be applied to English constituency parsing?
+2. What are the advantages of the Transformer compared to existing models?
+3. What is the complexity per layer of self-attention, recurrent, convolutional and restricted self-attention?
+4. How does the Transformer compare to existing models in terms of quality?
+5. What is the dimensionality of input and output for the Transformer?
+Memory:
+1. The Transformer is a new simple network architecture based solely on attention mechanisms.
+2. Experiments on two machine translation tasks show that the Transformer is superior in quality, more parallelizable and requires less time to train.
+3. The Transformer achieved 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results by over 2 BLEU.
+4. On the WMT 2014 English-to-French translation task, the Transformer established a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs.
+5. The Transformer generalizes well to other tasks, such as English constituency parsing with both large and limited training data, language modeling and machine translation.
+6. The Transformer requires less time to train compared to existing models.
+7. The Transformer is superior in quality compared to existing models.
+8. The Transformer is composed of a stack of 6 identical layers, each layer has two sub-layers: a multi-head self-attention mechanism and a simple, positionwise fully connected feed-forward network.
+9. The Transformer is auto-regressive, consuming the previously generated symbols as additional input when generating the next.
+10. The dimensionality of input and output is dmodel = 512, and the inner-layer has dimensionality df f = 2048.
+
+Questions:
+1. How much training data is needed for the Transformer to be applied to English constituency parsing?
+2. What are the advantages of the Transformer compared to existing models?
+3. What is the complexity per layer of self-attention, recurrent, convolutional and restricted self-attention?
+4. How does the Transformer compare to existing models in terms of quality?
+5. What is the dimensionality of input and output for the Transformer?
+Memory:
+1. The Transformer is a new simple network architecture based solely on attention mechanisms.
+2. Experiments on two machine translation tasks show that the Transformer is superior in quality, more parallelizable and requires less time to train.
+3. The Transformer achieved 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results by over 2 BLEU.
+4. On the WMT 2014 English-to-French translation task, the Transformer established a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs.
+5. The Transformer generalizes well to other tasks, such as English constituency parsing with both large and limited training data.
+6. The Transformer requires less time to train compared to existing models.
+7. The Transformer is superior in quality compared to existing models.
+8. The Transformer is composed of a stack of 6 identical layers, each layer has two sub-layers: a multi-head self-attention mechanism and a simple, positionwise fully connected feed-forward network.
+9. The Transformer is auto-regressive, consuming the previously generated symbols as additional input when generating the next.
+10. The dimensionality of input and output is dmodel = 512, and the inner-layer has dimensionality df f = 2048.
+11. The code used to train and evaluate the Transformer is available at https://github.com/tensorflow/tensor2tensor.
+
+Questions:
+1. How much training data is needed for the Transformer to be applied to English constituency parsing?
+2. What are the advantages of the Transformer compared to existing models?
+3. What is the complexity per layer of self-attention, recurrent, convolutional and restricted self-attention?
+4. How does the Transformer compare to existing models in terms of quality?
+5. What is the dimensionality of input and output for the Transformer?
