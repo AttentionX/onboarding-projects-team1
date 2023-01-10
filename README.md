@@ -2,7 +2,7 @@
 
 ## Project 1️⃣ - summarize the Transformer paper (~1/10)
 - 유빈: [code](https://github.com/AttentionX/onboarding-projects-team1/blob/issue_1/main.py)
-- 유종: [code](https://github.com/AttentionX/onboarding-projects-team1/blob/issue_2/attentionX_1.ipynb) 
+- 유종: [code](https://github.com/AttentionX/onboarding-projects-team1/blob/issue_2/attentionX_1.ipynb), [colab](https://colab.research.google.com/drive/1foxfy1632vZZ8qYac5eRJ0Ak6jiKDc4G?usp=sharing)
 - 준영: [code](https://github.com/AttentionX/onboarding-projects-team1/blob/issue_3/Project1/main.py) 
 
 
