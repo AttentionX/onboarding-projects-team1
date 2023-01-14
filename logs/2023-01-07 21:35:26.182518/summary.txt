@@ -1,0 +1,10 @@
+
+1. The authors tried to accomplish creating a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. This architecture was tested on two machine translation tasks and was found to be superior in quality while being more parallelizable and requiring significantly less time to train.
+
+2. The key elements of the approach are attention mechanisms, which are used to connect the encoder and decoder. Attention mechanisms are based on mathematics such as matrix multiplication and softmax functions. The attention mechanism works by taking a set of input vectors and producing a set of output vectors, which are then used to calculate the attention weights. The attention weights are then used to calculate the context vector, which is used to generate the output.
+
+3. The approach was limited by the fact that it was only tested on two machine translation tasks, so it is not clear how well it would perform on other tasks. Additionally, the approach relies heavily on attention mechanisms, which can be computationally expensive and may not be suitable for all tasks.
+
+4. The Transformer could be used for computer-assisted language learning by using it to generate translations of text from one language to another. This could be used to help students learn a new language by providing them with translations of words and phrases. Additionally, the Transformer could be used to generate summaries of text, which could be used to help students understand complex topics.
+
+5. Other references to follow include the original paper by Vaswani et al. (2017), which introduced the Transformer architecture, as well as other papers that have used the Transformer for various tasks such as machine translation, summarization, and question answering. Additionally, there are many tutorials and blogs available online that provide an overview of the Transformer architecture and how it can be used for various tasks.

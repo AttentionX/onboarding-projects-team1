@@ -1,0 +1,10 @@
+
+1. The authors proposed a new simple network architecture called the Transformer, based solely on attention mechanisms, that eliminates the need for recurrence and convolutions. They tested their model on two machine translation tasks and found that it was superior in quality while being more parallelizable and requiring significantly less time to train.
+
+2. The key elements of the approach involve attention mechanisms, which allow the model to focus on certain aspects of the input sequence and ignore other parts. The mathematics behind these mechanisms include the use of a scoring function that calculates the similarity between the query vector and the key vector. This score is then used to generate a weighted sum of the values that helps the model decide which parts of the input sequence to focus on.
+
+3. The approach was limited by its reliance on attention mechanisms, which can be computationally expensive and require a lot of data for training. Additionally, it was limited by its lack of recurrence or convolutions, which can help capture long-term dependencies in the data.
+
+4. The Transformer could be used for Computer-assisted Language Learning (CALL) by utilizing the attention mechanisms to help identify important parts of a language sequence, such as words or phrases, and then providing feedback to the user based on that. Additionally, the Transformer’s ability to generate weighted sums of values could be used to adjust the difficulty of the language tasks depending on the user’s level of proficiency.
+
+5. Other references to follow include Vaswani et al. (2017), Bahdanau et al. (2015), and Sutskever et al. (2014).
