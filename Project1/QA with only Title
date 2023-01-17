@@ -1,0 +1,82 @@
+Code
+
+import os
+import openai
+from data import *
+from process import *
+
+# Load your API key from an environment variable or secret management service
+openai.api_key = os.getenv('OPENAI_API_KEY')
+print(openai.api_key)
+
+engine = "text-davinci-003"
+max_tokens = 1000
+temperature = 0.1
+
+prompt = ''
+test_prompt = f"""
+Q : Do you know about the paper 'Attention is all you need '?
+A : Yes. I'm familiar with that.
+Q : I want to 
+"""
+
+response = openai.Completion.create(
+    engine=engine, 
+    prompt=test_prompt,
+    temperature=temperature,
+    max_tokens=max_tokens)
+
+new_prompt = f"""
+{test_prompt}
+
+{response.choices[0].text}
+
+Q: Answer the following questions : 
+ 1. What did authors try to accomplish? Describe with rich examples. 
+ 2. What were the key elements of the approach? Describe the mathematics behind the key elements as well with rich examples. 
+ 3. In what ways the approach was limited by? Describe with rich examples. 
+ 4. How could you use it for computer-assisted language learning? Describe with rich examples. 
+ 5. What other references should you follow?  
+
+A: Sure.
+
+"""
+
+print(new_prompt)
+
+response = openai.Completion.create(
+    engine=engine, 
+    prompt=new_prompt,
+    temperature=temperature,
+    max_tokens=max_tokens)
+
+print(response.choices[0].text)
+
+
+Result
+
+Q : Give me the Abstract of the paper 'Attention is all you need '.
+A : Sure.
+
+Abstract:
+
+This paper presents a novel architecture for natural language processing (NLP) tasks, called the Transformer. The Transformer is based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.
+
+Q: Answer the following questions : 
+ 1. What did authors try to accomplish? Describe with rich examples. 
+ 2. What were the key elements of the approach? Describe the mathematics behind the key elements as well with rich examples. 
+ 3. In what ways the approach was limited by? Describe with rich examples. 
+ 4. How could you use it for computer-assisted language learning? Describe with rich examples. 
+ 5. What other references should you follow?  
+
+A: Sure.
+
+1. The authors of the paper 'Attention is all you need' tried to accomplish the development of a novel architecture for natural language processing (NLP) tasks, called the Transformer. This architecture is based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks showed that these models are superior in quality while being more parallelizable and requiring significantly less time to train.
+
+2. The key elements of the approach are the attention mechanisms, which are used to learn the relationships between words in a sentence. The mathematics behind the attention mechanisms are based on the concept of self-attention, which is a type of neural network that can learn the relationships between words in a sentence without relying on recurrence or convolutional layers.
+
+3. The approach was limited by the fact that it is not able to capture long-term dependencies between words in a sentence. Additionally, the Transformer architecture is not able to capture the context of a sentence, which is important for understanding the meaning of a sentence.
+
+4. The Transformer architecture could be used for computer-assisted language learning by allowing students to learn language more quickly and efficiently. For example, the Transformer could be used to generate personalized language learning materials based on the student's current level of proficiency. Additionally, the Transformer could be used to generate personalized feedback for students based on their performance in language learning tasks.
+
+5. Other references that should be followed include the original paper 'Attention is all you need' by Vaswani et al. (2017), as well as other papers on the Transformer architecture such as 'BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding' by Devlin et al. (2018). Additionally, papers on self-attention such as 'Self-Attention with Relative Position Representations' by Shaw et al. (2018) should also be consulted.
