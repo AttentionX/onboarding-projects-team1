@@ -32,14 +32,13 @@ class PegasusSoftForConditionalGeneration(PegasusForConditionalGeneration):
         B = input_ids.shape[0]
         S = self.get_input_embeddings().soft_embeddings.weight.shape[0]
         # this is just to make the API happy (the problem pos embeddings)
-        input_ids = torch.cat([torch.full((B, S), 0).to(input_ids),
-                               input_ids], dim=1)  # (B, S);(B, L) -> (B, S + L)
+        input_ids = torch.cat([input_ids, torch.full((B, S), 0).to(input_ids)], dim=1)  # (B, L);(B, S) -> (B, L + S)
         # must be padded
         if attention_mask is not None:
-            attention_mask = torch.cat([torch.full((B, S), 1).to(attention_mask), attention_mask],
-                                       dim=1)  # (B, S);(B, L) -> (B, S + L)
+            attention_mask = torch.cat([attention_mask, torch.full((B, S), 1).to(attention_mask)],
+                                       dim=1)  # (B, L);(B, S) -> (B, L + S)
         if labels is not None:
-            labels = torch.cat([torch.full((B, S), 0).to(labels), labels],
-                               dim=1)  # (B, S);(B, L) -> (B, S + L)
+            labels = torch.cat([labels, torch.full((B, S), 0).to(labels)],
+                               dim=1)  # (B, L);(B, S) -> (B, L + S)
         return super().forward(input_ids, attention_mask, labels=labels)
 

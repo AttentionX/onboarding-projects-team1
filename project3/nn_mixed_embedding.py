@@ -13,5 +13,5 @@ class MixedEmbedding(torch.nn.Embedding):
         """
         S = self.soft_embeddings.weight.shape[0]
         hard_embeddings = self.hard_embeddings(input_ids[:, S:])  # (B, S + L) -> (B, L) ->  (B, L, H)
-        soft_embeddings = self.soft_embeddings.weight.expand(input_ids.shape[0], -1, -1)  # (S, H) -> (B, S, H)
-        return torch.cat([soft_embeddings, hard_embeddings], dim=1)  # (B, S, H);(B, L, H) -> (B, S + L, H)
+        soft_embeddings = self.soft_embeddings.weight.expand(input_ids.shape[0], -1, -1) # (S, H) -> (B, S, H)
+        return torch.cat([hard_embeddings, soft_embeddings], dim=1)  # (B, L, H);(B, S, H) -> (B, L + S, H)
