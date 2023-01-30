@@ -7,6 +7,8 @@ import os
 from datetime import datetime
 from pathlib import Path
 from typing import Union
+
+import numpy as np
 import torch
 import wandb
 import pytorch_lightning as pl
@@ -29,12 +31,12 @@ parser.add_argument("--fast_dev_run", type=int, default=1, choices=[0, 1])
 parser.add_argument("--log_model", type=int, default=0, choices=[0, 1])
 parser.add_argument("--limit_train_batches", type=float, default=None)
 parser.add_argument("--limit_val_batches", type=float, default=None)
+parser.add_argument("--seed", type=int, default=82)
 parsed_args = parser.parse_args()
 with open(Path(__file__).resolve().parent / "config.yaml", 'r') as fh:
     config = yaml.safe_load(fh)
 config.update(vars(parsed_args))
 os.environ['TOKENIZERS_PARALLELISM'] = 'true'
-
 
 class PegasusModule(pl.LightningModule):
     """
@@ -48,18 +50,20 @@ class PegasusModule(pl.LightningModule):
     def training_step(self, batch: list[torch.LongTensor], *args, **kwargs) -> dict:
         input_ids, attention_mask, labels = batch[0], batch[1], batch[2]
         output = self.pegasus.forward(input_ids, attention_mask, labels=labels)
+        loss = output['loss']
+        self.log("Train/loss", loss)
         return {
             'loss': output['loss']  # the training loss
         }
 
-    def training_step_end(self, step_output: dict):
-        self.log("Train/loss", step_output['loss'])
-
-    def validation_step(self, *args, **kwargs) -> dict:
-        return self.training_step(*args, **kwargs)
-
-    def validation_step_end(self, step_output: dict):
-        self.log("Validation/loss", step_output['loss'])
+    def validation_step(self, batch: list[torch.LongTensor], *args, **kwargs) -> dict:
+        input_ids, attention_mask, labels = batch[0], batch[1], batch[2]
+        output = self.pegasus.forward(input_ids, attention_mask, labels=labels)
+        loss = output['loss']
+        self.log("Validation/loss", loss)
+        return {
+            'loss': output['loss']  # the training loss
+        }
 
     def configure_optimizers(self) -> dict:
         optimizer = torch.optim.Adam(self.parameters(), **wandb.config["optimizer"])
@@ -112,13 +116,17 @@ def main():
         val_dataset = TensorDataset(val_encodings['input_ids'],
                                     val_encodings['attention_mask'],
                                     val_labels)
+        g = torch.Generator()
+        g.manual_seed(parsed_args.seed)
         train_dataloader = DataLoader(train_dataset,
                                       batch_size=parsed_args.batch_size,
                                       shuffle=parsed_args.shuffle,
-                                      num_workers=parsed_args.num_workers)
+                                      num_workers=parsed_args.num_workers,
+                                      generator=g)
         val_dataloader = DataLoader(val_dataset,
                                     batch_size=parsed_args.batch_size,
-                                    num_workers=parsed_args.num_workers)
+                                    num_workers=parsed_args.num_workers,
+                                    generator=g)
         # --- train pegasus --- #
         trainer = pl.Trainer(
             logger=WandbLogger(log_model=parsed_args.log_model),
