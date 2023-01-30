@@ -6,9 +6,7 @@ import argparse
 import os
 from datetime import datetime
 from pathlib import Path
-from typing import Union
-
-import numpy as np
+from typing import Union, List
 import torch
 import wandb
 import pytorch_lightning as pl
@@ -47,7 +45,7 @@ class PegasusModule(pl.LightningModule):
         super().__init__(*args, **kwargs)
         self.pegasus = pegasus
 
-    def training_step(self, batch: list[torch.LongTensor], *args, **kwargs) -> dict:
+    def training_step(self, batch: List[torch.LongTensor], *args, **kwargs) -> dict:
         input_ids, attention_mask, labels = batch[0], batch[1], batch[2]
         output = self.pegasus.forward(input_ids, attention_mask, labels=labels)
         loss = output['loss']
@@ -56,7 +54,7 @@ class PegasusModule(pl.LightningModule):
             'loss': output['loss']  # the training loss
         }
 
-    def validation_step(self, batch: list[torch.LongTensor], *args, **kwargs) -> dict:
+    def validation_step(self, batch: List[torch.LongTensor], *args, **kwargs) -> dict:
         input_ids, attention_mask, labels = batch[0], batch[1], batch[2]
         output = self.pegasus.forward(input_ids, attention_mask, labels=labels)
         loss = output['loss']
