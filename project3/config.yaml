@@ -1,0 +1,4 @@
+n_soft_tokens: 15
+max_length: 512
+optimizer:
+  lr: 1.0e-3
