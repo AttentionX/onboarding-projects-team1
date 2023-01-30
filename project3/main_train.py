@@ -23,7 +23,8 @@ parser.add_argument("approach", type=str, choices=["ft", "pt"], help="either ft(
 parser.add_argument("--max_epochs", type=int, default=100)
 parser.add_argument("--batch_size", type=int, default=128)
 parser.add_argument("--num_workers", type=int, default=5)
-parser.add_argument("--auto_select_gpus", type=int, default=1, choices=[0, 1])
+parser.add_argument("--accelerator", type=str, default="gpu")
+parser.add_argument("--devices", type=int, default=-1)
 parser.add_argument("--shuffle", type=int, default=1, choices=[0, 1])
 parser.add_argument("--fast_dev_run", type=int, default=1, choices=[0, 1])
 parser.add_argument("--log_model", type=int, default=1, choices=[0, 1])
@@ -129,7 +130,8 @@ def main():
         trainer = pl.Trainer(
             logger=WandbLogger(log_model=parsed_args.log_model),
             max_epochs=parsed_args.max_epochs,
-            auto_select_gpus=parsed_args.auto_select_gpus,
+            accelerator=parsed_args.accelerator,
+            devices=parsed_args.devices,
             fast_dev_run=parsed_args.fast_dev_run,
             limit_train_batches=parsed_args.limit_train_batches,
             limit_val_batches=parsed_args.limit_val_batches
