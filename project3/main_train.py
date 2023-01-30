@@ -28,7 +28,7 @@ parser.add_argument("--num_workers", type=int, default=5)
 parser.add_argument("--auto_select_gpus", type=int, default=1, choices=[0, 1])
 parser.add_argument("--shuffle", type=int, default=1, choices=[0, 1])
 parser.add_argument("--fast_dev_run", type=int, default=1, choices=[0, 1])
-parser.add_argument("--log_model", type=int, default=0, choices=[0, 1])
+parser.add_argument("--log_model", type=int, default=1, choices=[0, 1])
 parser.add_argument("--limit_train_batches", type=float, default=None)
 parser.add_argument("--limit_val_batches", type=float, default=None)
 parser.add_argument("--seed", type=int, default=82)
@@ -62,7 +62,7 @@ class PegasusModule(pl.LightningModule):
         loss = output['loss']
         self.log("Validation/loss", loss)
         return {
-            'loss': output['loss']  # the training loss
+            'loss': output['loss']  # the validation loss
         }
 
     def configure_optimizers(self) -> dict:
