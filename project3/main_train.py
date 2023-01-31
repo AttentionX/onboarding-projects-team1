@@ -12,8 +12,8 @@ import wandb
 import pytorch_lightning as pl
 from datasets import load_dataset
 from pytorch_lightning.loggers import WandbLogger  # noqa
-from transformers import GPT2LMHeadModel, GPT2Tokenizer
-from gpt2_soft import GPT2SoftLMHeadModel, GPT2SoftConfig
+from transformers import BartForConditionalGeneration, BartTokenizer
+from bart_soft import BartSoftForConditionalGeneration, BartSoftConfig
 from torch.utils.data import TensorDataset, DataLoader
 import yaml
 
@@ -41,14 +41,14 @@ class TrainingModule(pl.LightningModule):
     """
     Just for training pegasus.  Nothing fancy.
     """
-    def __init__(self, gpt2: Union[GPT2LMHeadModel, GPT2SoftLMHeadModel],
+    def __init__(self, bart: Union[BartForConditionalGeneration, BartSoftForConditionalGeneration],
                  *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.gpt2 = gpt2
+        self.bart = bart
 
     def training_step(self, batch: List[torch.LongTensor], *args, **kwargs) -> dict:
         input_ids, attention_mask, labels = batch[0], batch[1], batch[2]
-        output = self.gpt2.forward(input_ids, attention_mask, labels=labels)
+        output = self.bart.forward(input_ids, attention_mask, labels=labels)
         loss = output['loss']
         self.log("train/loss", loss)
         return {
@@ -57,7 +57,7 @@ class TrainingModule(pl.LightningModule):
 
     def validation_step(self, batch: List[torch.LongTensor], *args, **kwargs) -> dict:
         input_ids, attention_mask, labels = batch[0], batch[1], batch[2]
-        output = self.gpt2.forward(input_ids, attention_mask, labels=labels)
+        output = self.bart.forward(input_ids, attention_mask, labels=labels)
         loss = output['loss']
         self.log("val/loss", loss)
         return {
@@ -74,17 +74,16 @@ def main():
 
     with wandb.init(project="onboarding-projects-team1", job_type=os.path.basename(__file__), config=config) as run:
         # --- load pre-trained tokenizer & gpt2 --- #
-        name = "gpt2"
+        name = "facebook/bart-base"
         if config['approach'] == "ft":
-            gpt2 = GPT2LMHeadModel.from_pretrained(name)
+            gpt2 = BartForConditionalGeneration.from_pretrained(name)
         elif config['approach'] == "pt":
-            pegasus_config = GPT2SoftConfig.from_pretrained(name, n_soft_tokens=config['n_soft_tokens'])
-            gpt2 = GPT2SoftLMHeadModel.from_pretrained(name, config=pegasus_config)
+            model_config = BartSoftConfig.from_pretrained(name, n_soft_tokens=config['n_soft_tokens'])
+            gpt2 = BartSoftForConditionalGeneration.from_pretrained(name, config=model_config)
         else:
             ValueError(f"Unknown approach: {config['approach']}")
-        tokenizer = GPT2Tokenizer.from_pretrained(name)
-        tokenizer.pad_token = tokenizer.eos_token
-        tokenizer.padding_side = 'left'
+        tokenizer = BartTokenizer.from_pretrained(name)
+        tokenizer.padding_side = "left"
         # --- tokenize texts --- #
         samsum_dataset = load_dataset('samsum')
         train_encodings = tokenizer([example['dialogue'] for example in samsum_dataset['train']],
@@ -144,7 +143,7 @@ def main():
                     val_dataloaders=val_dataloader)
         # --- persist the final artifacts to wandb only if the training is properly done --- #
         if not parsed_args.fast_dev_run and not trainer.interrupted:
-            artifact = wandb.Artifact(f"gpt2", type="model")
+            artifact = wandb.Artifact(f"bart", type="model")
             save_dir = Path("out") / str(datetime.now())
             os.makedirs(save_dir)
             tokenizer.save_pretrained(save_dir / "tokenizer")

@@ -1,24 +1,24 @@
 import torch
 from typing import Optional, Union, Tuple
-from transformers import GPT2LMHeadModel, GPT2Config
+from transformers import BartForConditionalGeneration, BartConfig
 from transformers.modeling_outputs import Seq2SeqLMOutput
 
 
-class GPT2SoftConfig(GPT2Config):
+class BartSoftConfig(BartConfig):
     def __init__(self, n_soft_tokens: int = 30, **kwargs):
         super().__init__(**kwargs)
         self.n_soft_tokens = n_soft_tokens
 
 
-class GPT2SoftLMHeadModel(GPT2LMHeadModel):  # noqa
+class BartSoftForConditionalGeneration(BartForConditionalGeneration):  # noqa
 
-    def __init__(self, config: GPT2SoftConfig):
+    def __init__(self, config: BartSoftConfig):
         super().__init__(config)
         # --- freeze the model --- #
         for param in self.parameters():
             param.requires_grad = False
         # --- this is the only layer to optimize for --- #
-        self.soft_embeddings = torch.nn.Embedding(config.n_soft_tokens, config.n_embd)  # (S, H)
+        self.soft_embeddings = torch.nn.Embedding(config.n_soft_tokens, config.d_model)  # (S, H)
 
     def forward(self,
                 input_ids: Optional[torch.Tensor] = None,
