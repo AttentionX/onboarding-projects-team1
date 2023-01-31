@@ -129,3 +129,5 @@ dmypy.json
 .pyre/
 *wandb
 *artifacts
+*out
+*lightning_logs
